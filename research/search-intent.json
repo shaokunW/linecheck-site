@@ -1,0 +1,62 @@
+{
+  "checked_on": "2026-10-02",
+  "method": "Google Trends comparison plus live search-result intent review; no Keyword Planner search-volume access.",
+  "google_trends": {
+    "region": "Worldwide",
+    "period": "Past 12 months",
+    "search_type": "Web Search",
+    "url": "https://trends.google.com/trends/explore?q=reading%20ruler,reading%20guide,line%20reader,text%20highlighter,proofreading",
+    "relative_average": {
+      "reading ruler": 2,
+      "reading guide": 57,
+      "line reader": 17,
+      "text highlighter": 2,
+      "proofreading": 36
+    },
+    "note": "0–100 indices share this comparison scale; these are not monthly search counts or ranking-difficulty scores. Broad queries have mixed intent."
+  },
+  "qualified_query": {
+    "query": "reading ruler chrome",
+    "relative_average": 0,
+    "comparison": [
+      "reading ruler chrome",
+      "reading guide",
+      "line reader",
+      "text highlighter",
+      "proofreading"
+    ],
+    "note": "Zero on this scale is insufficient evidence of no demand; rounding and sparse search data prevent a useful volume conclusion."
+  },
+  "intent_evidence": [
+    {
+      "url": "https://chromewebstore.google.com/detail/readingline/bedndhimamenfipaocmhcpcickamhfnm?hl=en",
+      "observation": "The product category uses reading ruler for following a text line; this supports terminology, not volume or efficacy."
+    },
+    {
+      "url": "https://support.google.com/trends/answer/4365533?hl=en",
+      "observation": "Google explains normalization and low-volume zero values."
+    }
+  ],
+  "decision": "Use reading ruler for Chrome to qualify the homepage. Publish three distinct scenario articles rather than repeat generic product FAQs. Choose by product fit and clear intent, not the largest broad index.",
+  "articles": [
+    {
+      "slug": "lose-place-reading-online",
+      "title_en": "Lose Your Place Reading Online? A Chrome Reading Ruler | LineCheck",
+      "title_zh": "读网页总串行？用逐行阅读找回位置 | LineCheck",
+      "validation": "Editorial long-tail hypothesis. Exact-query search volume, including Chinese demand, is not verified. Opening situations are imagined scenarios, not testimonials."
+    },
+    {
+      "slug": "read-english-articles-line-by-line",
+      "title_en": "How to Read English Articles One Line at a Time | LineCheck",
+      "title_zh": "读英文文章总要回看？试试逐行精读 | LineCheck",
+      "validation": "Editorial long-tail hypothesis. Exact-query search volume, including Chinese demand, is not verified. Opening situations are imagined scenarios, not testimonials."
+    },
+    {
+      "slug": "proofread-web-page-line-by-line",
+      "title_en": "How to Proofread a Web Page Line by Line | LineCheck",
+      "title_zh": "网页发布前怎么校对？逐行标记已检查的文字 | LineCheck",
+      "validation": "Editorial long-tail hypothesis. Exact-query search volume, including Chinese demand, is not verified. Opening situations are imagined scenarios, not testimonials."
+    }
+  ],
+  "next_measurement": "Use actual Search Console queries, impressions, clicks and CTR after indexing. Evaluate each article separately; do not promise rank or medical/learning outcomes."
+}

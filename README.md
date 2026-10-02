@@ -10,7 +10,7 @@ Deploy the main branch root using GitHub Pages. This repository contains only th
 
 ## SEO and release checks
 
-The site is plain HTML and CSS: its content, navigation, translations, and metadata are available without JavaScript. English and Simplified Chinese homepages and guides have reciprocal `hreflang` links and self-referencing canonical URLs. The sitemap lists the five indexable pages; the custom 404 is excluded and marked `noindex`. JSON-LD describes the actual pages and guide breadcrumbs, without invented reviews or ratings. Social cards use the existing icon.
+The site is plain HTML and CSS: its content, navigation, translations, and metadata are available without JavaScript. English and Simplified Chinese homepages and guides have reciprocal `hreflang` links and self-referencing canonical URLs. The sitemap lists the eleven indexable pages; the custom 404 is excluded and marked `noindex`. JSON-LD describes the actual pages and guide breadcrumbs, without invented reviews or ratings. Social cards use the existing icon.
 
 Run before publishing:
 
@@ -20,7 +20,7 @@ python3 scripts/check_seo.py
 
 GitHub Actions runs the same check on pushes and pull requests. GitHub Pages currently publishes the root of `main`; a passing branch check is not evidence that a deployment has completed. Check the Pages build and live URLs after merging. When adding a page, add its canonical URL to `sitemap.xml`, link it from relevant content, and keep translation links reciprocal. Do not change `lastmod` simply because a build ran; this sitemap intentionally omits it.
 
-### 搜索引擎后台：仍需账号操作
+### 搜索引擎后台操作
 
 1. 在 [Google Search Console](https://search.google.com/search-console/) 添加 **网址前缀**资源 `https://shaokunw.github.io/linecheck-site/`。这个 GitHub 子域名不属于可由本项目修改 DNS 的自有域名，因此使用网址前缀验证。
 2. 按后台实际提供的方式，将 HTML 验证文件放在本站根目录，或把后台提供的验证 meta 标签加入英文首页。必须使用账号生成的真实值，发布后再完成验证。保留验证文件或标签。
@@ -44,7 +44,7 @@ GitHub Actions runs the same check on pushes and pull requests. GitHub Pages cur
 
 ### 内容和产品事实
 
-指南以公开源码支持的行为为准。开发工作区里尚未发布的版本、语言和快捷键不应提前写成线上功能。已核实 [Chrome Web Store 的公开产品链接](https://chromewebstore.google.com/detail/linecheck/pcfmhpdkaplkchannpbidjinmlknlein)，首页提供商店安装按钮，指南同时保留免费源码安装路径。商店语言列表已包含德语；商店说明中的旧快捷键与开发工作区存在差异，指南因此引导用户查看和配置实际快捷键。FAQ 是给用户阅读的真实说明，没有添加不适用于此产品的 FAQ 富结果声明。
+指南以公开源码支持的行为为准。开发工作区里尚未发布的版本、语言和快捷键不应提前写成线上功能。已核实 [Chrome Web Store 的公开产品链接](https://chromewebstore.google.com/detail/linecheck/pcfmhpdkaplkchannpbidjinmlknlein)，首页提供商店安装按钮，指南同时保留免费源码安装路径。商店语言列表已包含德语；商店说明中的旧快捷键与开发工作区存在差异，指南因此引导用户查看和配置实际快捷键。首页展示三个阅读场景入口，每个场景有独立的中英文文章；通用安装和兼容性说明保留在指南中。文章使用假设场景，不是用户评价。
 
 不要使用虚构评价、关键词堆砌、批量重复落地页或伪造兼容性声明。优先根据实际使用问题完善指南。此仓库不负责更新 Chrome Web Store 后台的商品资料。
 
@@ -70,3 +70,11 @@ python3 scripts/submit_indexnow.py --submit
 ```
 
 返回 HTTP 200 表示服务收到网址；202 表示收到网址但仍在验证 key。都不代表已收录，也不是 Google 提交。发生 429 时不要连续重试。只有内容发生实际变化并发布完成后才需要再次通知。参见 [IndexNow 官方协议](https://www.indexnow.org/documentation)。
+
+### 场景文章与选题依据
+
+首页不再以功能 FAQ 为主要内容。三个独立场景是：长文找不到阅读位置、英文文章逐行精读、网页发布前人工校对。每篇都有自己的场景叙述、阅读流程、标题和网址，中英文互相对应；它们不是仅替换关键词的重复页面。
+
+[research/search-intent.json](research/search-intent.json) 保留 Google Trends 的查询范围、相对指数、意图判断和六个文章标题。英文广义词 `reading guide` 在本次比较中的均值为 57，`reading ruler` 为 2，但前者包含其他阅读导读需求，不能因此选作所有页面的目标词。`reading ruler chrome` 在同组尺度中显示为 0，不等于无人搜索。精确长尾词和中文标题的搜索量尚未验证，属于待用 Search Console 数据检验的内容假设。
+
+后续按每篇文章的实际查询词、曝光、点击和点击率调整标题。不要把相对指数写成月搜索量，不要把场景描写写成真实用户证言，不承诺治疗、速读提升或自动校对能力。
