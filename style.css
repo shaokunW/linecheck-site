@@ -37,3 +37,9 @@ table kbd{white-space:nowrap}
 .article-action,.related-reading{margin-top:40px;border-top:1px solid #cbd8ca}
 .article-action .button{margin:0 16px 12px 0}
 @media(max-width:600px){.scenario-card{padding:20px}.scenario-card h3{font-size:22px}.story-page article>p,.story-page li{font-size:17px}.story-page article>.lead{font-size:20px}}
+
+.article-illustration{margin:28px 0 36px}
+.article-illustration img{display:block;width:100%;height:auto;border-radius:12px}
+.scenario-card{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;align-items:center}
+.scenario-image{display:block;width:100%;height:auto;border-radius:8px}
+@media(max-width:600px){.scenario-card{grid-template-columns:1fr;gap:18px}.article-illustration{margin:24px 0 28px}}

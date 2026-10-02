@@ -36,6 +36,8 @@ class Page(HTMLParser):
         if tag == 'img':
             assert all(k in a for k in ('alt','width','height')), 'Image needs alt and dimensions'
             self.refs.append(a['src'])
+            if a.get('srcset'):
+                self.refs.extend(item.strip().split()[0] for item in a['srcset'].split(','))
         if tag == 'script':
             assert a.get('type') == 'application/ld+json', 'Pages should not require executable JavaScript'
             self.in_json = True
@@ -81,7 +83,10 @@ for url, page in pages.items():
     assert page.meta['og:url'] == url
     assert page.meta['og:title'] == page.title
     assert page.meta['og:description'] == desc
-    assert page.meta['twitter:card'] == 'summary'
+    assert page.meta['twitter:card'] in ('summary', 'summary_large_image')
+    if page.meta['twitter:card'] == 'summary_large_image':
+        assert int(page.meta['og:image:width']) >= 1200
+        assert int(page.meta['og:image:height']) > 0
     assert page.structured and page.structured[0]['url'] == url
     for lang, alt in page.alternates().items():
         assert alt in pages, f'{url}: alternate is missing: {alt}'

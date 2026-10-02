@@ -10,7 +10,7 @@ Deploy the main branch root using GitHub Pages. This repository contains only th
 
 ## SEO and release checks
 
-The site is plain HTML and CSS: its content, navigation, translations, and metadata are available without JavaScript. English and Simplified Chinese homepages and guides have reciprocal `hreflang` links and self-referencing canonical URLs. The sitemap lists the eleven indexable pages; the custom 404 is excluded and marked `noindex`. JSON-LD describes the actual pages and guide breadcrumbs, without invented reviews or ratings. Social cards use the existing icon.
+The site is plain HTML and CSS: its content, navigation, translations, and metadata are available without JavaScript. English and Simplified Chinese homepages and guides have reciprocal `hreflang` links and self-referencing canonical URLs. The sitemap lists the eleven indexable pages; the custom 404 is excluded and marked `noindex`. JSON-LD describes the actual pages and guide breadcrumbs, without invented reviews or ratings. Homepages and scenario articles use their editorial illustrations for large social cards; guides and the privacy page retain the icon.
 
 Run before publishing:
 
@@ -78,3 +78,7 @@ python3 scripts/submit_indexnow.py --submit
 [research/search-intent.json](research/search-intent.json) 保留 Google Trends 的查询范围、相对指数、意图判断和六个文章标题。英文广义词 `reading guide` 在本次比较中的均值为 57，`reading ruler` 为 2，但前者包含其他阅读导读需求，不能因此选作所有页面的目标词。`reading ruler chrome` 在同组尺度中显示为 0，不等于无人搜索。精确长尾词和中文标题的搜索量尚未验证，属于待用 Search Console 数据检验的内容假设。
 
 后续按每篇文章的实际查询词、曝光、点击和点击率调整标题。不要把相对指数写成月搜索量，不要把场景描写写成真实用户证言，不承诺治疗、速读提升或自动校对能力。
+
+### Article illustrations
+
+Three original editorial illustrations are shared by the English and Chinese scenario articles and homepage cards. Web assets live in `assets/illustrations/`: 1536×1024 JPEGs for articles and sharing, plus 768×512 versions for smaller screens and lazy-loaded homepage cards. Image dimensions reserve layout space and localized alt text describes each scene. The drawings illustrate reading situations rather than reproduce the product interface. Built-in image generation prompts are recorded in [research/illustration-prompts.json](research/illustration-prompts.json).
