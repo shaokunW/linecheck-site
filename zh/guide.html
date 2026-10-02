@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮</title>
+  <meta name="description" content="了解如何在 Chrome 安装 LineCheck，使用键盘逐行阅读网页、绿色和红色文字高亮、当前行放大，并排查无法开启聚焦或恢复标记的问题。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://shaokunw.github.io/linecheck-site/zh/guide.html">
+  <link rel="alternate" hreflang="en" href="https://shaokunw.github.io/linecheck-site/guide.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://shaokunw.github.io/linecheck-site/zh/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://shaokunw.github.io/linecheck-site/guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LineCheck">
+  <meta property="og:title" content="LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮">
+  <meta property="og:description" content="了解如何在 Chrome 安装 LineCheck，使用键盘逐行阅读网页、绿色和红色文字高亮、当前行放大，并排查无法开启聚焦或恢复标记的问题。">
+  <meta property="og:url" content="https://shaokunw.github.io/linecheck-site/zh/guide.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://shaokunw.github.io/linecheck-site/icon.png">
+  <meta property="og:image:alt" content="LineCheck icon">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮">
+  <meta name="twitter:description" content="了解如何在 Chrome 安装 LineCheck，使用键盘逐行阅读网页、绿色和红色文字高亮、当前行放大，并排查无法开启聚焦或恢复标记的问题。">
+  <meta name="twitter:image" content="https://shaokunw.github.io/linecheck-site/icon.png">
+  <meta name="twitter:image:alt" content="LineCheck icon">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://shaokunw.github.io/linecheck-site/zh/guide.html#webpage", "url": "https://shaokunw.github.io/linecheck-site/zh/guide.html", "name": "LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮", "description": "了解如何在 Chrome 安装 LineCheck，使用键盘逐行阅读网页、绿色和红色文字高亮、当前行放大，并排查无法开启聚焦或恢复标记的问题。", "inLanguage": "zh-CN", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "LineCheck", "item": "https://shaokunw.github.io/linecheck-site/zh/"}, {"@type": "ListItem", "position": 2, "name": "LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮", "item": "https://shaokunw.github.io/linecheck-site/zh/guide.html"}]}, "mainEntity": {"@type": "TechArticle", "headline": "LineCheck 安装与使用指南 — Chrome 逐行阅读、文字高亮", "description": "了解如何在 Chrome 安装 LineCheck，使用键盘逐行阅读网页、绿色和红色文字高亮、当前行放大，并排查无法开启聚焦或恢复标记的问题。", "inLanguage": "zh-CN"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至正文</a>
+  <header>
+    <a class="brand" href="./"><img src="../icon.png" alt="" width="36" height="36">LineCheck</a>
+    <nav aria-label="主导航">
+      <a href="guide.html">使用指南</a>
+      <a href="../privacy.html">隐私政策（英文）</a>
+      <a href="../guide.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </header>
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="当前位置"><a href="./">LineCheck</a> / 使用指南</nav>
+    <h1>LineCheck 安装与使用指南</h1><p class="lead">逐行阅读网页，标记已复查文字，把需要再看的内容留待复查。</p>
+    <nav class="contents" aria-label="本页目录"><a href="#install">安装</a> · <a href="#controls">快捷键</a> · <a href="#workflow">阅读流程</a> · <a href="#troubleshooting">问题排查</a></nav>
+    <section id="install"><h2>从 Chrome 应用商店安装</h2><ol><li>在桌面版 Chrome 中打开官方 <a href="https://chromewebstore.google.com/detail/linecheck/pcfmhpdkaplkchannpbidjinmlknlein">LineCheck 商店页面</a>。</li><li>选择<strong>添加至 Chrome</strong>，查看扩展所需权限并安装。</li><li>打开或刷新普通文章网页，点击 LineCheck 图标并开启 Focus。</li></ol><h3>另一种方式：从开源代码安装</h3><p>LineCheck 免费、开源。请使用桌面版 Chrome 120 或更高版本。</p><ol><li>打开 <a href="https://github.com/shaokunW/linecheck">LineCheck 源码仓库</a>，选择 <strong>Code → Download ZIP</strong>，然后解压。</li><li>在 Chrome 地址栏输入 <code>chrome://extensions</code>，开启<strong>开发者模式</strong>。</li><li>选择<strong>加载已解压的扩展程序</strong>，打开包含 <code>manifest.json</code> 的 <code>linecheck-extension</code> 文件夹。</li><li>打开或刷新普通文章网页，点击 LineCheck 扩展图标并开启 Focus。</li></ol><p>请保留解压后的源码文件夹。更新源码后，需要重新加载扩展并刷新文章。可以在扩展弹窗中选择界面语言。</p></section>
+    <section id="controls"><h2>键盘快捷键</h2><table><caption>聚焦状态下的键盘操作</caption><thead><tr><th scope="col">按键</th><th scope="col">作用</th></tr></thead><tbody><tr><th scope="row"><kbd>↑ / ↓</kbd></th><td>切换到上一行或下一行，不添加标记</td></tr><tr><th scope="row"><kbd>Enter</kbd></th><td>切换绿色已复查标记，停留在当前行</td></tr><tr><th scope="row"><kbd>F</kbd></th><td>切换红色待复查标记，停留在当前行</td></tr><tr><th scope="row"><kbd>← / →</kbd></th><td>缩小或放大当前行文字</td></tr><tr><th scope="row"><kbd>Esc</kbd></th><td>退出聚焦并保留标记</td></tr></tbody></table><p>重复使用同一种标记会清除它；使用另一种标记会替换颜色。标记后不会自动跳到下一行。</p><p>全局聚焦快捷键可在 <code>chrome://extensions/shortcuts</code> 中设置。不同扩展版本或 Chrome 设置下的快捷键可能不同；如果与浏览器或其他扩展冲突，请更换按键组合。</p></section>
+    <section id="workflow"><h2>一个简单的阅读与复查流程</h2><ol><li>开启 Focus，阅读清晰的当前行，用方向键按自己的节奏移动。</li><li>完成复查后按 Enter；遇到需要再看的文字时按 F。</li><li>用左右方向键调整当前行的放大程度，不改变原文章排版。</li><li>结束后按 Esc，保留文字标记。再次打开同一完整网址时，扩展会尝试恢复记录。</li></ol><p>阅读记录仅保存在当前浏览器配置的本地存储中，不会跨设备同步。扩展不提供自动拼写或语法检查。</p></section>
+    <section id="troubleshooting"><h2>常见问题排查</h2><h3>无法开启聚焦</h3><p>安装后请刷新文章。Chrome 内部页面、Chrome 应用商店和内置 PDF 阅读器不支持此阅读工具，请尝试普通 HTML 文章。</p><h3>有些文字被跳过</h3><p>图片文字、画布、嵌入式框架和 Shadow DOM 不受支持。复杂排版或动态变化的页面可能无法稳定工作。</p><h3>之前的高亮没有恢复</h3><p>请确认完整网址一致，包括查询参数和片段。恢复需要唯一匹配的文字锚点；文章修改或重复文字可能导致恢复失败。</p><h3>能阅读本地 HTML 文件吗？</h3><p>在 Chrome 的扩展详情中开启<strong>允许访问文件网址</strong>。本地 PDF 仍不受支持。</p><h3>如何删除记录？</h3><p>扩展弹窗的清除操作会移除当前页的标记和已保存阅读位置，部分页面元数据仍会保留。卸载扩展会清除扩展本地存储，但不会删除另行导出的文件。完整说明见<a href="../privacy.html">隐私政策（英文）</a>。</p></section>
+    <p>需要帮助？<a href="mailto:wangsk15@outlook.com">联系 LineCheck 支持</a>，或在 <a href="https://github.com/shaokunW/linecheck/issues">GitHub 报告问题</a>。</p>
+  </main>
+  <footer>LineCheck · <a href="https://github.com/shaokunW/linecheck">GitHub</a> · <a href="../privacy.html">隐私政策（英文）</a> · <a href="mailto:wangsk15@outlook.com">联系支持</a></footer>
+</body>
+</html>
